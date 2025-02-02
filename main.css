@@ -1,114 +1,126 @@
 :root {
-    --primary-yellow: #fcd913;
-    --black: #000000;
-    --white: #ffff;
-    --light-gray: #f4f4f4;
-  }
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: var(--light-gray);
-    padding: 20px;
-    height: 200rem;
-  }
-  
-  main {
-    display: block;
-    margin-top: 100px;
-  }
-  
-  #rooftop {
-    background-color: var(--primary-yellow);
-    height: 15vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: fixed;
-    z-index: 50;
-    top: 0;
-    left: 0;
-    transition: border 0.5s ease;
-  }
-  #rooftop.scrolled{
-    box-shadow: 10px 10px 15px rgba(255, 255, 0, 0.5)
-  }
-  
-  .calculator, .callBack {
-    display: block;
-    height: 60vh;
-    width: 60vw;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-  }
-  .callBack{
-    margin-top: 15vh;
-  }
-  .container, .state, .buttonCont{
-    width: 100%;
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start; 
-    padding: 10px;
-    margin-left: 55px;
-  } 
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  input, select {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #d1d1d1;
-    border-radius: 5px;
-  }
-  select{
-    width: 83%;
-  }
-  
-  button {
-    width: 83%;
-    height: 40px;
-    padding: 10px;
-    margin-top: 30px;
-    border: none;
-    background-color: #fcd913;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  button:hover {
-    background-color: #e0b90e;
-  }
-  
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    align-items: center;
-    justify-content: center;
-    
-  }
-  
-  .modal_item {
-    background-color: white;
-    padding: 20px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    
-  }
-  
+  --primary-yellow: #fcd913;
+  --black: #000000;
+  --white: #ffff;
+  --light-gray: #f4f4f4;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(141deg, #ffffff 0%, #f8f9fa 50%, #dcdcdc 100%);
+  padding: 20px;
+}
+
+main {
+  display: block;
+  margin-top: 100px;
+}
+
+#rooftop {
+  background-color: var(--primary-yellow);
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  transition: border 0.5s ease;
+}
+#rooftop.scrolled {
+  box-shadow: 10px 10px 15px rgba(255, 255, 0, 0.5);
+}
+
+.calculator,
+.callBack {
+  display: block;
+  height: 60vh;
+  width: 60vw;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+.calculator {
+  position: relative;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.calculator.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.callBack {
+  margin-top: 15vh;
+}
+.container,
+.state,
+.buttonCont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  margin-left: 55px;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input,
+select {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+}
+select {
+  width: 83%;
+}
+
+button {
+  width: 83%;
+  height: 40px;
+  padding: 10px;
+  margin-top: 30px;
+  border: none;
+  background-color: #fcd913;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #e0b90e;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal_item {
+  background-color: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

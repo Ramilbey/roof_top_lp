@@ -67,3 +67,7 @@ window.onclick = function (event) {
     document.getElementById("modal").style.display = "none";
   }
 };
+
+window.addEventListener("load", function () {
+  document.querySelector(".calculator").classList.add("show");
+});
