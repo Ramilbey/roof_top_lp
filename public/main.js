@@ -11,6 +11,7 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scrolled");
   }
 });
+
 document.getElementById("form").addEventListener("submit", function (evt) {
   evt.preventDefault(); 
   let monthlyBill = parseFloat(document.getElementById("rmn").value);
