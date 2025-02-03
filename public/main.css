@@ -13,11 +13,18 @@ body {
   text-align: center;
   background: linear-gradient(141deg, #ffffff 0%, #f8f9fa 50%, #dcdcdc 100%);
   padding: 20px;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+  
 }
 
 main {
   display: block;
   margin-top: 100px;
+  flex: 1;
 }
 
 #rooftop {
@@ -115,6 +122,9 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.4);
   align-items: center;
   justify-content: center;
+  /* transition: opacity 0.5s ease; */
+  /* opacity: 0; */
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
 .modal_item {
@@ -123,6 +133,10 @@ button:hover {
   width: 300px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: left; /* Ensures text starts from the left */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /* 🔥 Responsive Styles */
@@ -133,6 +147,7 @@ button:hover {
 
   main {
     margin-top: 80px;
+   
   }
 
   /* Reduce Navbar Height for Mobile */
@@ -198,18 +213,22 @@ button:hover {
 
   /* Adjust Modal Display */
   .modal {
-    display: flex;
+    display: none;
+    position: fixed;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 100;
+    
   }
 
   .modal_item {
     width: 90%;
     padding: 15px;
+    
   }
+  
 
-  /* Fix Form Elements */
   input[type="number"],
   input[type="text"],
   input[type="email"],
@@ -224,5 +243,47 @@ button:hover {
 
   label {
     margin-bottom: 5px;
+  }
+}
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 2vh;
+  font-size: 14px;
+  width: 100%;
+  margin-left: -20px;
+  margin-top: 10vh;
+}
+
+footer a {
+  color: #fcd913;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* mobile responsive */
+
+@media (max-width: 576px) {
+  body {
+    padding: 20px;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+  .calculator{
+    margin-top: 50px;
+  }
+  .callBack{
+    margin-top: 50px;
+    
+  }
+  footer{
+    margin-top: 5vh;
   }
 }
