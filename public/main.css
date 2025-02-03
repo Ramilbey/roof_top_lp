@@ -68,56 +68,15 @@ main {
 }
 
 .callBack {
-  /* position: absolute; */
   margin-top: 15vh;
-  transform: translateX(100%); /* Start off the right side */
+  transform: translateX(100%); 
 }
 
 .callBack.show {
   opacity: 1;
-  transform: translateX(0); /* Slide in to the center */
+  transform: translateX(0); 
 }
 
-/* 
-.calculator,
-.callBack {
-  display: block;
-  height: 60vh;
-  width: 60vw;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-}
-.calculator {
-  position: relative;
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: transform 1s ease-out, opacity 1s ease-out;
-}
-
-.calculator.show {
-  opacity: 1;
-  transform: translateX(0);
-} */
-/* .callBack {
-  position: relative;
-  margin-left: 1017px;
-  overflow: hidden;
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: transform 1s ease-out, opacity 1s ease-out;
-} */
-/* 
-.callBack.show {
-  opacity: 1;
-  transform: translateX(100);
-}
-
-.callBack {
-  margin-top: 15vh;
-} */
 .container,
 .state,
 .buttonCont {

@@ -68,12 +68,6 @@ window.onclick = function (event) {
   }
 };
 
-// window.addEventListener("load", function () {
-//   document.querySelector(".calculator").classList.add("show");
-// });
-// window.addEventListener("load", function () {
-//   document.querySelector(".callBack").classList.add("show");
-// });
 window.addEventListener("load", function () {
   document.querySelector(".calculator").classList.add("show");
   document.querySelector(".callBack").classList.add("show");
